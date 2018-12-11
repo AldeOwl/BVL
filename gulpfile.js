@@ -128,7 +128,7 @@ gulp.task('assets', () => {
     glob(paths.assets, (err, files) => {
         if (!err) {
             gulp.src(files)
-                .pipe(gulp.dest(`${paths.build.dir}/assets`));
+                .pipe(gulp.dest(`${paths.build.dir}/images`));
         } else {
             throw err;
         }
@@ -137,7 +137,7 @@ gulp.task('assets', () => {
 
 gulp.task('fonts', () => {
     gulp.src('./src/fonts/**/*')
-        .pipe(filter(['*.woff', '*.woff2', '*.ttf']))
+        // .pipe(filter(['*.woff', '*.woff2', '*.ttf', '*.otf'])) почему то не работает
         .pipe(gulp.dest(`${paths.build.dir}/fonts`));
 });
 

@@ -2,8 +2,14 @@ html {
     background-color: #224680;
 }
 body {
+    font-family: 'Opensans';
+    font-weight: normal;
     max-width: 1400px;
     min-width: 400px;
     padding: 0;
     margin: auto;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bebas';
+    font-weight: bold;
 }
