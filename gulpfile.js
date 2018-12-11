@@ -84,8 +84,7 @@ gulp.task('compile', () => {
                 ignorePartials: true,
                 batch: files.map(item => item.slice(0, item.lastIndexOf('/'))),
                 helpers: {
-                    up: str => str.toUpperCase(),
-                    copy: str => str + ' ' + str
+                    
                 }
             };
 

@@ -1,0 +1,16 @@
+.menu {
+    display: flex;
+    /* justify-content: space-between; */
+    width: 100%;
+    height: 60px;
+    background-color: #ffffff;
+    border-left: 1p solid black;
+}
+.menu__item {
+    width: 15%;
+    line-height: 60px;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+}

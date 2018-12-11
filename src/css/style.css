@@ -1,0 +1,9 @@
+html {
+    background-color: #224680;
+}
+body {
+    max-width: 1400px;
+    min-width: 400px;
+    padding: 0;
+    margin: auto;
+}
