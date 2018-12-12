@@ -13,6 +13,8 @@
     width: 100%;
     height: 60px;
     background-color: #ffffff;
+    font-family: 'Bebas';
+    font-weight: bold;
 }
 .menu :last-child {
     border-right: 1px solid black;
