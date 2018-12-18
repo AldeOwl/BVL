@@ -1,0 +1,41 @@
+.teams {
+    &__title {
+        height: 40px;
+        color: #ffffff;
+        background-color: #2751E8;
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 40px;
+    }
+    &__item {
+        
+    }
+    &__link-wrap {
+        width: 150px;
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+    }
+    &__link {
+        height: 70px;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid #000;
+        transition: .3s ease-out;
+
+    }
+    &__link:hover {
+        background-color: lightblue;
+    }
+    &__link-title {
+        margin-left: 15px;
+        color: #000;
+        font-size: 25px;
+    }
+    &__link-img {
+        width: 60px;
+        height: 40px;
+    }
+}

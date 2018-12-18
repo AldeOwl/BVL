@@ -7,42 +7,66 @@
     width: 100%;
 }
 .video {
-    width: 70%;
-    margin-top: 10px;
-    /* border: 2px solid #ffffff; */
- }
- .video-wrap {
     position: relative;
     padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
     padding-top: 30px;
     height: 0;
     overflow: hidden;
  }
-  .video iframe {
+ .wrap-video {
+    width: 70%;
+    margin-top: 10px;
+    /* border: 2px solid #ffffff; */
+ }
+.video iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-  }
-  .news-wrap {
+}
+.news {
+    &__title {
+        height: 40px;
+        color: #ffffff;
+        background-color: #2751E8;
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 40px;
+    }
+    &__item {
+        text-align: start;
+        box-sizing: content-box;
+    }
+    &__link {
+        text-decoration: none;
+        padding: 15px 15px 0 15px;
+        display: block;
+        border-bottom: 1px solid #000;
+        transition: .3s ease-out;
+
+    }
+    &__link:hover {
+        background-color: lightblue;
+    }
+    &__link-date {
+        color: #f7aa41;
+    }
+    &__link-title {
+        margin: 5px 0;
+        color: #000;
+    }
+}
+.wrap-news {
       width: 29%;
       margin-top: 10px;
       margin-left: 10px;
       background-color: #ffffff;
 
   }
-  .news__title {
-      height: 40px;
-      background-color: #ffffff;
-      text-align: center;
-      text-transform: uppercase;
-      line-height: 40px;
-      padding-left: 20px;
-      border-bottom: 1px solid #000;
-}
+
 .teams {
-    width: calc(70% + 3px);
+    width: 70%;
     height: 300px;
     margin-top: 10px;
     background-color: #ffffff;
