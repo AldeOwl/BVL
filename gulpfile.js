@@ -22,14 +22,13 @@ const styleLint = require('stylelint');
 const reporter = require('postcss-reporter');
 const filter = require('gulp-filter');
 
-const text = require("./src/test.json");
 const jsLint = require("./eslintrc.json");
 const cssLint = require("./stylelintrc.json");
 
 const paths = {
     src: {
         dir: 'src',
-        styles: 'src/css/**/*css',
+        styles: 'src/css/**/*scss',
         scripts: 'src/scripts/*js'
     },
     build: {
@@ -47,8 +46,7 @@ const paths = {
         
     },
     templates: 'src/templates/**/*.hbs',
-    assets: 'src/**/*.png',
-    contextJson: 'src/test.json',
+    assets: 'src/images/**',
 };
 
 env({
@@ -78,18 +76,17 @@ gulp.task('lint', ['jslint', 'csslint']);
 
 
 gulp.task('compile', () => {
+    const temp = [];
     glob(paths.templates, (err, files) => {
         if (!err) {
             const option = {
                 ignorePartials: true,
                 batch: files.map(item => item.slice(0, item.lastIndexOf('/'))),
-                helpers: {
-                    
-                }
+                helpers: {}
             };
 
             return gulp.src(`${paths.src.dir}/index.hbs`)
-            .pipe(handlebars(text, option))
+            .pipe(handlebars(temp, option))
             .pipe(rename('index.html'))
             .pipe(gulp.dest(paths.build.dir));
         }
@@ -112,22 +109,27 @@ gulp.task('css', () => {
     const plugins = [
         nested,
         postcssShort,
+        assets({
+            loadPaths: ['src/images/'],
+          }),
         postcssPresetEnv({ stage: 0}),
         autoprefixer({ browsers: ['last 2 version'] })
     ];
     return gulp.src([paths.src.styles])
         .pipe(sourcemaps.init())
         .pipe(postcss(plugins))
-            .pipe(concat(paths.buildNames.styles))
-            .pipe(gulpif(process.env.NODE_ENV === 'production', cssnano()))
+        .pipe(concat(paths.buildNames.styles))
+        .pipe(gulpif(process.env.NODE_ENV === 'production', cssnano()))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(paths.build.styles));
 });
 
 gulp.task('assets', () => {
+    const imgFilter = filter(['**/*.png', '**/*.svg', '**/*.jpg']);
     glob(paths.assets, (err, files) => {
         if (!err) {
             gulp.src(files)
+                .pipe(imgFilter)
                 .pipe(gulp.dest(`${paths.build.dir}/images`));
         } else {
             throw err;
@@ -136,8 +138,9 @@ gulp.task('assets', () => {
 });
 
 gulp.task('fonts', () => {
-    gulp.src('./src/fonts/**/*')
-        // .pipe(filter(['*.woff', '*.woff2', '*.ttf', '*.otf'])) почему то не работает
+    const fontFilter = filter(['**/*.woff', '**/*.woff2', '**/*.ttf']);
+    gulp.src('src/fonts/**')
+        .pipe(fontFilter)
         .pipe(gulp.dest(`${paths.build.dir}/fonts`));
 });
 
@@ -153,8 +156,6 @@ gulp.task('watch', () => {
     gulp.watch(paths.templates, ['compile']);
     gulp.watch(paths.src.scripts, ['js']);
     gulp.watch(paths.src.styles, ['css']);
-    gulp.watch(paths.contextJson)
-        .on('change', browserSync.reload);
     gulp.watch(`${paths.build.dir}/**/*`)
         .on('change', browserSync.reload);
 });
@@ -165,7 +166,5 @@ gulp.task('clean', () => {
 });
 
 gulp.task('build', ['js', 'css', 'compile', 'fonts', 'assets']);
-
-gulp.task('prod', ['build']);
 gulp.task('dev', ['build', 'watch', 'sync']);
 

@@ -6,8 +6,8 @@
   "scripts": {
     "test": " ",
     "start": "gulp dev",
-    "build": "gulp prod",
-    "postinstall": "gulp prod"
+    "build": "gulp build",
+    "postinstall": "gulp build"
   },
   "pre-push": [
     "test"

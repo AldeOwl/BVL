@@ -1,4 +1,8 @@
 .teams {
+    width: 70%;
+    height: 300px;
+    margin-top: 10px;
+    background-color: #ffffff;
     &__title {
         height: 40px;
         color: #ffffff;
@@ -6,36 +10,42 @@
         text-align: center;
         text-transform: uppercase;
         line-height: 40px;
+        border-bottom: 1px solid #000;
     }
     &__item {
         
     }
     &__link-wrap {
-        width: 150px;
-        display: flex;
-        // justify-content: center;
-        align-items: center;
-    }
-    &__link {
         height: 70px;
-        text-decoration: none;
         display: flex;
         justify-content: center;
         align-items: center;
         border-bottom: 1px solid #000;
+    }
+    &__link {
+        width: 250px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
         transition: .3s ease-out;
 
     }
     &__link:hover {
-        background-color: lightblue;
+        color: #f7aa41;
     }
     &__link-title {
         margin-left: 15px;
         color: #000;
         font-size: 25px;
+        &:hover {
+            color: #f7aa41;
+        }
     }
     &__link-img {
         width: 60px;
         height: 40px;
+        &:hover +.teams__link-title {
+            color: #f7aa41;
+        }
     }
 }

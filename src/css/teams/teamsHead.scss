@@ -1,0 +1,61 @@
+.teams-head {
+    width: 100%;  
+}
+
+.teams-head__title {
+    font-size: 50px;    
+    color: #ffffff;
+    margin: 50px;
+}
+.teams-select {
+    width: 320px;
+    display: flex;
+    height: 70px;
+    background-color: #ffffff;
+    padding-left: 30px;
+    cursor: pointer;
+    &__item {
+        position: relative;
+        top: 20%;
+        left: 5%;
+        width: 40px;
+        background: inline('down.svg') no-repeat;
+        background-size: contain;
+        &-active {
+            position: relative;
+            top: 20%;
+            left: 5%;
+            width: 40px;
+            background: inline('remove.svg') no-repeat;
+            background-size: contain;
+        }
+    }
+}
+.teams-mod {
+    
+}
+.teams-list {
+    display: none;
+    margin-top: 30px;
+    width: 100%;
+    background: #ffffff;
+    &-active {
+        display: flex;
+
+    }
+
+}
+.team-info {
+    width: 100%;
+    background: #ffffff;
+}
+.list-view {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    &__item {
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+}

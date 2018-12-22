@@ -1,6 +1,9 @@
 .main {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
+    &-active {
+        display: flex;
+    }
 }
 .section {
     display: flex;
@@ -65,20 +68,7 @@
 
   }
 
-.teams {
-    width: 70%;
-    height: 300px;
-    margin-top: 10px;
-    background-color: #ffffff;
- }
- .teams__title {
-    height: 40px;
-    background-color: #ffffff;
-    text-align: center;
-    text-transform: uppercase;
-    line-height: 40px;
-    border-bottom: 1px solid #000;
- }
+
  .instagram-wrap {
     width: 29%;
     height: 460px;

@@ -11,20 +11,20 @@
 <body>
     <header class="head">
             <div class="logo">
-                <a href="#">
+                <a class="logo-link" href="#">
                     <img class="logo__img" src="images/Logo.min2.png" alt="Кубок наций 2019">
                 </a>
                 <h1 class="tornament-name">кубок наций 2019</h1>
             </div>
-            <div class="menu">
-                <a href="#" class="menu__item">Главная</a>
-                <a href="#" class="menu__item">новости</a>
-                <a href="#" class="menu__item">меню 3</a>
+            <div id='menu' class="menu">
+                <a data-menu='main' href="#" class="menu__item menu__item-active">Главная</a>
+                <a data-menu='news' href="#" class="menu__item">новости</a>
+                <a data-menu='teams' href="#" class="menu__item">команды</a>
                 <a href="#" class="menu__item">меню 4</a>
                 <a href="#" class="menu__item">меню 5</a>
             </div>
-        </header>
-     <div class="main">
+    </header>
+     <div data-section="main" class="main">
         <div class="section">
             <div class="wrap-video">
                 <div class="video">
@@ -64,20 +64,21 @@
                    <h3>участники</h3>
                </div>
                <div class="teams__item">
-                   <a class="teams__link" href="#">
-                       <div class="teams__link-wrap">
-                           <img class="teams__link-img" src="images/flags/Russia.jpg" alt="" >
-                           <h3 class="teams__link-title">Россия</h3>
-                       </div>
-                   </a>
-                   <a class="teams__link" href="#">
-                       <div class="teams__link-wrap">
-                           <img class="teams__link-img" src="images/flags/Honkong.jpg" alt="" >
+                   <div class="teams__link-wrap">
+                       <a class="teams__link" href="#">
+                           <img class="teams__link-img" src="" alt="" >
+                           <h3 class="teams__link-title"></h3>
+                       </a>
+                   </div>
+                   <div class="teams__link-wrap">
+                       <a class="teams__link" href="#">
+                           <img class="teams__link-img" src="images/hkg.jpg" alt="" >
                            <h3 class="teams__link-title">гонконг</h3>
-                       </div>
-                   </a>
+                       </a>
+                   </div>
                </div>
-           </div>        
+           </div>
+        
             <div class="instagram-wrap">
                 <div class="instagram">
                     <div class="instagram__title">
@@ -87,7 +88,215 @@
                 </div>
             </div>
         </div>
+        <div class="section">
+            <div class="pools-wrap">
+                <div class="pools-title">
+                    <h3>Группы</h3>
+                </div>
+                <div class="pools-menu">
+                    <div data-group = 'A' class="pools-menu__item pools-menu__item-active"><h2>A</h2></div>
+                    <div data-group = 'B' class="pools-menu__item"><h2>B</h2></div>
+                    <div data-group = 'C' class="pools-menu__item"><h2>C</h2></div>
+                    <div data-group = 'D' class="pools-menu__item"><h2>D</h2></div>
+                </div>
+                <div class="pools-list">
+                    <div data-group = 'A' class="pools-list__item pools-list__item-active">
+                        <div class="pools-list__title">
+                            <div class="title-name">
+                                <h4>команда</h4>
+                            </div>
+                            <div class="title-result">
+                                <h4>игры</h4>
+                                <h4>в</h4>
+                                <h4>п</h4>
+                            </div>
+                            
+                        </div>
+                        <ul class="comand-list">
+                            <li class="comand-list__item">
+                                <a class="teams__link" href="#">
+                                    <img class="teams__link-img" src="images/hkg.jpg" alt="" >
+                                    <h3 class="teams__link-title">гонконг</h3>
+                                </a>
+                            </li>
+                            <li class="comand-list__item">
+                                <a class="teams__link" href="#">
+                                    <img class="teams__link-img" src="images/pol.jpg" alt="" >
+                                    <h3 class="teams__link-title">польша</h3>
+                                </a>
+                            </li>
+                            <li class="comand-list__item">
+                                <a class="teams__link" href="#">
+                                    <img class="teams__link-img" src="images/jpn.jpg" alt="" >
+                                    <h3 class="teams__link-title">япония</h3>
+                                </a>
+                            </li>
+                            <li class="comand-list__item">
+                                <a class="teams__link" href="#">
+                                    <img class="teams__link-img" src="images/nso.jpg" alt="" >
+                                    <h3 class="teams__link-title">нсо</h3>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div data-group = 'B' class="pools-list__item">
+                        <div class="pools-list__title">
+                            <div class="title-name">
+                                <h4>команда</h4>
+                            </div>
+                            <div class="title-result">
+                                <h4>игры</h4>
+                                <h4>в</h4>
+                                <h4>п</h4>
+                            </div>
+                            
+                        </div>
+                        <ul class="comand-list">
+                            <li class="comand-list__item">
+                                <a class="teams__link" href="#">
+                                    <img class="teams__link-img" src="images/hkg.jpg" alt="" >
+                                    <h3 class="teams__link-title">гонконг</h3>
+                                </a>
+                            </li>
+                            <li class="comand-list__item">
+                                <a class="teams__link" href="#">
+                                    <img class="teams__link-img" src="images/pol.jpg" alt="" >
+                                    <h3 class="teams__link-title">польша</h3>
+                                </a>
+                            </li>
+                            <li class="comand-list__item">
+                                <a class="teams__link" href="#">
+                                    <img class="teams__link-img" src="images/jpn.jpg" alt="" >
+                                    <h3 class="teams__link-title">япония</h3>
+                                </a>
+                            </li>
+                            <li class="comand-list__item">
+                                <a class="teams__link" href="#">
+                                    <img class="teams__link-img" src="images/nso.jpg" alt="" >
+                                    <h3 class="teams__link-title">нсо</h3>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pools-list__item"></div>
+                    <div class="pools-list__item"></div>
+                </div>
+            </div>        </div>
      </div>
+     <div data-section="news" class="main"></div>
+     <div data-section="teams" class="main main-active">
+         <div class="teams-head">
+             <h2 class="teams-head__title">команды</h2>
+             <div class="teams-select">
+                 <a class="teams__link" href="#">
+                     <img class="teams__link-img" src="images/hkg.jpg" alt="" >
+                     <h3 class="teams__link-title">гонконг</h3>
+                 </a>
+                 <div class="teams-select__item"></div>
+             </div>
+             <div class="teams-list">
+                 <ul class="list-view">
+                     <li class="list-view__item">
+                         <a class="teams__link" href="#">
+                             <img class="teams__link-img" src="images/hkg.jpg" alt="" >
+                             <h3 class="teams__link-title">гонконг</h3>
+                         </a>
+                     </li>
+                     <li class="list-view__item">
+                         <a class="teams__link" href="#">
+                             <img class="teams__link-img" src="images/pol.jpg" alt="" >
+                             <h3 class="teams__link-title">польша</h3>
+                         </a>
+                     </li>
+                     <li class="list-view__item">
+                         <a class="teams__link" href="#">
+                             <img class="teams__link-img" src="images/jpn.jpg" alt="" >
+                             <h3 class="teams__link-title">япония</h3>
+                         </a>
+                     </li>
+                     <li class="list-view__item">
+                         <a class="teams__link" href="#">
+                             <img class="teams__link-img" src="images/nso.jpg" alt="" >
+                             <h3 class="teams__link-title">нсо</h3>
+                         </a>
+                     </li>
+                     <li class="list-view__item">
+                         <a class="teams__link" href="#">
+                             <img class="teams__link-img" src="images/arm.jpg" alt="" >
+                             <h3 class="teams__link-title">армения</h3>
+                         </a>
+                     </li>
+                     <li class="list-view__item">
+                         <a class="teams__link" href="#">
+                             <img class="teams__link-img" src="images/aus.jpg" alt="" >
+                             <h3 class="teams__link-title">австралия</h3>
+                         </a>
+                     </li>
+                     <li class="list-view__item">
+                         <a class="teams__link" href="#">
+                             <img class="teams__link-img" src="images/fra.jpg" alt="" >
+                             <h3 class="teams__link-title">франция</h3>
+                         </a>
+                     </li>
+                     <li class="list-view__item">
+                         <a class="teams__link" href="#">
+                             <img class="teams__link-img" src="images/gbr.jpg" alt="" >
+                             <h3 class="teams__link-title">великобритания</h3>
+                         </a>
+                     </li>
+                     <li class="list-view__item">
+                         <a class="teams__link" href="#">
+                             <img class="teams__link-img" src="images/kaz.jpg" alt="" >
+                             <h3 class="teams__link-title">казахстан</h3>
+                         </a>
+                     </li>
+                     <li class="list-view__item">
+                         <a class="teams__link" href="#">
+                             <img class="teams__link-img" src="images/kgz.jpg" alt="" >
+                             <h3 class="teams__link-title">киргизия</h3>
+                         </a>
+                     </li>
+                     <li class="list-view__item">
+                         <a class="teams__link" href="#">
+                             <img class="teams__link-img" src="images/mys.jpg" alt="" >
+                             <h3 class="teams__link-title">малайзия</h3>
+                         </a>
+                     </li>
+                     <li class="list-view__item">
+                         <a class="teams__link" href="#">
+                             <img class="teams__link-img" src="images/rou.jpg" alt="" >
+                             <h3 class="teams__link-title">румыния</h3>
+                         </a>
+                     </li>
+                     <li class="list-view__item">
+                         <a class="teams__link" href="#">
+                             <img class="teams__link-img" src="images/rus.jpg" alt="" >
+                             <h3 class="teams__link-title">россия</h3>
+                         </a>
+                     </li>
+                     <li class="list-view__item">
+                         <a class="teams__link" href="#">
+                             <img class="teams__link-img" src="images/hkg.jpg" alt="" >
+                             <h3 class="teams__link-title">гонконг</h3>
+                         </a>
+                     </li>
+                 </ul>
+             </div>
+         </div>
+             <div class="team-info"></div>     </div>
+         
+     <footer class="foot">
+         <div class="foot-wrap">
+             <div class="foot__item">спонсор</div>
+             <div class="foot__item">спонсор</div>
+             <div class="foot__item">спонсор</div>
+             <div class="foot__item">спонсор</div>
+             <div class="foot__item">спонсор</div>
+             <div class="foot__item">спонсор</div>
+             <div class="foot__item">спонсор</div>
+             <div class="foot__item">спонсор</div>
+         </div>
+     </footer>    <script src="scripts/instafeed.min.js"></script>
     <script src="scripts/script.min.js"></script>
 </body>
 </html>
