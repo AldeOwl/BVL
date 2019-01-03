@@ -1,21 +1,46 @@
 .foot {
-    height: 200px;
     margin-top: 40px;
     background-color: #282828;
     display: flex;
     justify-content: center;
     &-wrap {
-        width: 550px;
+        width: 30%;
         margin-top: 20px;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         flex-wrap: wrap;
+        color: #ffffff;
+        & p {
+            margin: 5px;
+        }
     }
     &__item {
         width: 100px;
         height: 50px;
-        margin: 15px;
+        margin-right: 10px;
+        color: #000;
         background-color: #fff;
         text-align: center;
     }
+}
+.general-partner {
+}
+.of-sponsors {
+    display: flex;
+    justify-content: space-between;
+}
+.of-partners {
+    display: flex;
+    justify-content: space-between;
+
+}
+.tech-partners {
+    display: flex;
+    justify-content: space-between;
+
+}
+.info-partners {
+    display: flex;
+    justify-content: space-between;
+
 }
