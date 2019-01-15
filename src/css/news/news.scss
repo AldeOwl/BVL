@@ -1,0 +1,29 @@
+.news-head {
+    width: 100%;  
+}
+.news-head__title {
+    font-size: 50px;    
+    color: #ffffff;
+    margin: 50px;
+}
+.news {
+    &__wrap {
+
+    }
+    &__item {
+        width: 450px;
+        cursor: pointer;
+        &-title {
+            font-size: 25px;
+            color: #ffffff;
+            line-height: 30px;
+        }
+        &-img {
+            
+        }
+        &-text {
+            padding: 15px;
+            background-color: #ffffff;
+        }
+    }
+}

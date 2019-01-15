@@ -82,7 +82,7 @@ function renderPlayerCard(name, birthday, height, number, photo){
 
     let btn = document.createElement('div');
     btn.classList.add('card-info__profile');
-    btn.innerHTML = 'подробнее';
+    btn.innerHTML = 'подробнее...';
 
     title.appendChild(num);
     title.appendChild(playerName);

@@ -20,11 +20,12 @@
                 <a data-menu='main' href="#" class="menu__item menu__item-active">Главная</a>
                 <a data-menu='news' href="#" class="menu__item">новости</a>
                 <a data-menu='teams' href="#" class="menu__item">команды</a>
-                <a href="#" class="menu__item">меню 4</a>
-                <a href="#" class="menu__item">меню 5</a>
+                <a data-menu='statistic' href="#" class="menu__item">статистика</a>
+                <a href="#" class="menu__item">расписание</a>
+                <a href="#" class="menu__item">трансляция</a>
             </div>
     </header>
-     <div data-section="main" class="main">
+     <div data-section="main" class="main main-active">
         <div class="section">
             <div class="wrap-video">
                 <div class="video">
@@ -166,6 +167,60 @@
                 </div>
             </div>
         </div>
+        <div class="section">
+            <div class="result">
+                <div class="result__title">
+                    <h3>последние результаты</h3>
+                </div>
+                <div class="result__wrap">
+                    <div class="result__match">
+                        <div class="match__title">
+                            <h3 class="match__name">группа А</h3>
+                        </div>
+                        <div class="match__info">
+                            <a class="teams__link match-team" href="#">
+                                <h3 class="teams__link-title">россия</h3>
+                            </a>
+                            <div class="match__score">
+                                <a href="" class="match__score-title">3-2</a>
+                                <div class="match__score-info">
+                                    <a href="" class="set__info"> <span>25</span>:20</a>
+                                    <a href="" class="set__info">21:25</a>
+                                    <a href="" class="set__info">9:25</a>
+                                    <a href="" class="set__info">25:8</a>
+                                    <a href="" class="set__info">13:15</a>
+                                </div>
+                            </div>
+                            <a class="teams__link match-team" href="#">
+                                <h3 class="teams__link-title">гонконг</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="result__match">
+                        <div class="match__title">
+                            <h3 class="match__name">группа А</h3>
+                        </div>
+                        <div class="match__info">
+                            <a class="teams__link match-team" href="#">
+                                <h3 class="teams__link-title">франция</h3>
+                            </a>
+                            <div class="match__score">
+                                <a href="" class="match__score-title">3-2</a>
+                                <div class="match__score-info">
+                                    <a href="" class="set__info">(25-20)</a>
+                                    <a href="" class="set__info">21-25</a>
+                                    <a href="" class="set__info">9-25</a>
+                                    <a href="" class="set__info">25-8</a>
+                                    <a href="" class="set__info">13-15</a>
+                                </div>
+                            </div>
+                            <a class="teams__link match-team" href="#">
+                                <h3 class="teams__link-title">новосибирская область</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>        </div>
         <div class="section">
             <div class="pools-wrap">
                 <div class="pools-title">
@@ -329,8 +384,27 @@
                 </div>
             </div>        </div>
      </div>
-     <div data-section="news" class="main"></div>
-     <div data-section="teams" class="main main-active">
+     <div data-section="news" class="main">
+         <div class="news-head">
+             <h2 class="news-head__title">новости</h2>
+         
+             <div class="news__wrap">
+                 <div class="news__item">
+                     <h3 class="news__item-title">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, doloremque.</h3>
+                     <img src="images/GetImage.jpeg" alt="" class="news__item-img">
+                     <div class="news__item-text">
+                         <p class="news__item-text-content">Lorem ipsum dolor sit amet,
+                              consectetur adipisicing elit. Esse qui autem odit cum cumque 
+                              iste ab id delectus ullam molestias doloremque voluptates 
+                              suscipit, quae dolore illum placeat perspiciatis possimus 
+                              praesentium maiores asperiores? Ea iure, beatae ipsa vel 
+                              impedit pariatur laborum molestiae consectetur commodi veniam,
+                               obcaecati quam? Tenetur laboriosam enim expedita!</p>
+                     </div>
+                 </div>
+             </div>
+         </div>     </div>
+     <div data-section="teams" class="main">
          <div class="teams-head">
              <h2 class="teams-head__title">команды</h2>
              <div class="teams-select">
@@ -372,32 +446,28 @@
                      <section class="schedule">
                          <p class="schedule-title">игры</p>
                          <div class="schedule__list">
-                             <h4 class="schedule__list-title">группа a</h4>
-                             <div class="schedule__item-wrap">
-                                 <a class="teams__link-schedule" href="#">
-                                     <img class="teams__link-img" src="images/kgz.jpg" alt="" >
-                                     <h3 class="teams__link-title">киргизия</h3>
-                                 </a>
-                                 <div class="schedule__item-score">
-                                     <h2>3-2</h2>
+                             <div class="result__match">
+                                 <div class="match__title">
+                                     <h3 class="match__name">группа А</h3>
                                  </div>
-                                 <a class="teams__link-schedule" href="#">
-                                     <img class="teams__link-img" src="images/kgz.jpg" alt="" >
-                                     <h3 class="teams__link-title">киргизия</h3>
-                                 </a>
-                             </div>
-                             <div class="schedule__item-wrap">
-                                 <a class="teams__link-schedule" href="#">
-                                     <img class="teams__link-img" src="images/kgz.jpg" alt="" >
-                                     <h3 class="teams__link-title">киргизия</h3>
-                                 </a>
-                                 <div class="schedule__item-score">
-                                     <h2>18.05</h2>
+                                 <div class="match__info">
+                                     <a class="teams__link match-team" href="#">
+                                         <h3 class="teams__link-title">россия</h3>
+                                     </a>
+                                     <div class="match__score">
+                                         <a href="" class="match__score-title">3-2</a>
+                                         <div class="match__score-info">
+                                             <a href="" class="set__info">25:20</a>
+                                             <a href="" class="set__info">21:25</a>
+                                             <a href="" class="set__info">9:25</a>
+                                             <a href="" class="set__info">25:8</a>
+                                             <a href="" class="set__info">13:15</a>
+                                         </div>
+                                     </div>
+                                     <a class="teams__link match-team" href="#">
+                                         <h3 class="teams__link-title">гонконг</h3>
+                                     </a>
                                  </div>
-                                 <a class="teams__link-schedule" href="#">
-                                     <img class="teams__link-img" src="images/kgz.jpg" alt="" >
-                                     <h3 class="teams__link-title">киргизия</h3>
-                                 </a>
                              </div>
                          </div>
                      </section>
@@ -405,10 +475,13 @@
                  <div data-name="players" class="team-section">
                      <section class="players">
                          <div class="players-list">
+                             
                          </div>
                      </section>        </div>
                  <div data-name="statistic" class="team-section"></div>
              </div>     </div>
+     <div data-section="statistic" class="main"></div>
+
          
      <footer class="foot">
          <div class="foot-wrap">

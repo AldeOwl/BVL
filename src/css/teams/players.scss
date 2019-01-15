@@ -6,17 +6,18 @@
     }
 }
 .player-card {
-    margin: 20px;
-    width: 30%;
+    margin: 15px;
+    // width: 30%;
     display: flex;
     &__img {
-        width: 45%;
+        width: 190px;
         height: 100%;
     }
     &__info {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        margin: 10px;
     }
 }
 .card-title {
@@ -55,20 +56,15 @@
         }
     }
     &__profile {
-        align-self: center;
         width: 130px;
         height: 50px;
-        color: #ffffff;
         font-family: 'Bebas';
         font-size: 20px;
         text-align: center;
         line-height: 50px;
-        background-color: #2751E8;
         cursor: pointer;
         &:hover {
-            background-color: #ffffff;
-            color: #2751E8;
-            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            color: #f7aa41;
         }
     }
 }

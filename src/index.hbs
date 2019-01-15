@@ -11,7 +11,7 @@
 <body>
     {{> header }}
 
-     <div data-section="main" class="main">
+     <div data-section="main" class="main main-active">
         <div class="section">
             <div class="wrap-video">
                 <div class="video">
@@ -58,13 +58,20 @@
             </div>
         </div>
         <div class="section">
+            {{> lastResult }}
+        </div>
+        <div class="section">
             {{> pools }}
         </div>
      </div>
-     <div data-section="news" class="main"></div>
-     <div data-section="teams" class="main main-active">
+     <div data-section="news" class="main">
+         {{> news }}
+     </div>
+     <div data-section="teams" class="main">
          {{> head }}
      </div>
+     <div data-section="statistic" class="main"></div>
+
          
      {{> footer }}
     <script src="scripts/instafeed.min.js"></script>

@@ -23,7 +23,7 @@
     font-weight: bold;
 }
 .menu :last-child {
-    border-right: 1px solid black;
+    border-right: 2px solid #224680;
 }
 .menu__item {
     display: block;
@@ -36,7 +36,7 @@
     font-weight: bold;
     font-size: 25px;
     text-transform: uppercase;
-    border-left: 1px solid black;
+    border-left: 2px solid #224680;
     transition: .3s ease-out;
     &-active {
         background-color: #f7aa41;

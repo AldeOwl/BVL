@@ -1,0 +1,58 @@
+.result {
+    width: 70%;
+    margin-top: 10px;
+    background-color: #ffffff;
+    &__title {
+        height: 40px;
+        color: #ffffff;
+        background-color: #2751E8;
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 40px;
+        border-bottom: 1px solid #000;
+    }
+    &__wrap {
+        
+    }
+    &__match {
+
+    }
+}
+.match {
+    &-team{
+        justify-content: center;
+    }
+    &__title {
+        height: 50px;
+        background-color: #edebeb;
+    }
+    &__name {
+        font-size: 25px;
+        text-align: center;
+        line-height: 50px;
+    }
+    &__info {
+        display: flex;
+        justify-content: center;
+        height: 70px;
+    }
+    &__score {
+        text-align: center;
+        &-title {
+            font-size: 25px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #000;
+        }
+    }
+}
+.set {
+    &__info{
+        text-decoration: none;
+        color: #000;
+        & span {
+            color: red;
+            font-weight: bold;
+        }
+    }
+}
